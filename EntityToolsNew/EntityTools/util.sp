@@ -231,16 +231,16 @@ void EditColor(int iClient, int iEntity, char cColor, int iValue, char type)
             int hex, r, g, b;
             HexToRGB(hex, r, g, b);
 
-            if(!(iColors[0] == r || iColors[1] == g || iColors[2] == b)
-			{
+            if (!(iColors[0] == r || iColors[1] == g || iColors[2] == b))
+            {
                 iColors[0] = r;
                 iColors[1] = g;
                 iColors[2] = b;
                 SetEntityRenderMode(iEntity, RENDER_TRANSCOLOR);
                 SetEntityRenderColor(iEntity, iColors[0], iColors[1], iColors[2], iColors[3]);
-			}
+            }
 
-			return;
+            return;
         }
     }
 
